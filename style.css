@@ -1,0 +1,343 @@
+/* Consignes 
+Largeur : 1060px
+gouttière : 20px
+fonts:
+Oswald
+Josefin Slab
+#190f06
+#bb5002
+#fee3ac
+#fff
+#c85303
+(25, 15, 6, 0.7)
+(25, 15, 6, 1)
+(25, 15, 6, 0.65)
+(200, 83, 3, 0.5)
+
+*/
+
+
+
+
+/* Global Styles */
+body,html,h1, h2, nav{
+     margin: 0;
+     padding: 0;
+}
+
+#wrapper{
+    max-width: 1060px;
+    width:100%;
+    margin: 40px auto 0;
+}
+
+
+/* Header Styles */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+}
+
+/* image styles */
+.cuisinier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.cuisinier img{
+    width: auto;
+    height: auto;
+    box-shadow: #000 0px 4px 8px, rgba(0,0,0,0.5) 0px 6px 20px;
+
+}
+
+.legumes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+}
+.legumes img{
+    width: auto;
+    height: auto;
+}
+
+.legumes2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+/* title styles */
+h1,h2{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+
+header h2{
+    font-size: 50px;
+    margin: 0;
+    letter-spacing: 0.16em;
+}
+header h1{
+    font-size: 30px;
+    margin: 0;
+    color: #643a17;
+}
+
+/* Divider Styles */
+.section-title{
+    max-width: 1060px; /* même largeur que l'image */
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: #190f06;
+}
+
+
+.section-title::before,
+.section-title::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #190f06;
+}
+
+.section-title::before{
+    margin-right: 20px;
+}
+
+.section-title::after{
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation Styles
+la position absolue par rapport au premier parent positionner par défaut qui est html */
+nav ul{ 
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li{
+    display: inline;
+    padding-left: 30px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+ a:hover, .current a{
+color: #f2ae2e ;
+}
+
+/* Font Styles */
+.texte{
+    display: flex;
+    gap: 20px; /* gouttière */
+    max-width: 1060px; /* même largeur que images */
+    margin: 40px auto;
+    font-family: 'Josefin Slab', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #190f06;
+    justify-content: center;
+    align-items: center;
+}
+
+.texte h4{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.texte span:not(.cook):not(.fruits){
+    font-size: 14px;
+    color: rgba(25,15,6,0.65);
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+/* Footer Styles */
+footer{
+    max-width: 1060px;
+    margin: 40px auto;
+    padding: 20px 0;
+    background-color: #bb5002;
+}
+
+footer p{
+    font-family: 'Josefin Slab', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.cook{
+    
+  float: left;           /* permet l’enroulement du texte */
+  font-size: 50px; 
+  font-weight: bold;
+  line-height: 0.9;    /* compresse la hauteur des lignes du mot */
+  margin-right: 20px; /* gouttière */
+  color: #111;
+  font-family: "Oswald", sans-serif;
+}
+
+/* --- Mise en page du formulaire dans la colonne --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  width: 100%;
+  
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels harmonisés avec ta typo */
+.contact-form label {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(25,15,6,0.65);
+  margin-bottom: 4px;
+}
+
+.fruits img{
+    
+  float: right;
+  width: 120px;          /* tu peux ajuster la taille */
+  height: auto;
+  margin: 0 15px 10px 0; /* espace autour de l’image */
+  border-radius: 4px; 
+
+}
+
+/* Champs de saisie */
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Josefin Slab', serif;
+  font-size: 16px;
+  color: #190f06;
+  background-color: #fff;
+  border: 1px solid rgba(25,15,6,0.35);
+  border-radius: 2px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, background-color .2s;
+  width: 100%;
+  resize: none;
+}
+
+/* Survol / focus */
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: rgba(25,15,6,0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c85303;                          /* orange foncé de ta palette */
+  box-shadow: 0 0 0 3px rgba(200,83,3,0.15);      /* (200,83,3,0.15) */
+}
+
+/* Placeholder */
+::placeholder {
+  color: rgba(25,15,6,0.5);
+}
+
+/* Bouton envoyer */
+.btn-submit {
+  align-self: flex-start;          /* bouton calé à gauche dans la colonne */
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background-color: #bb5002;       /* orange foncé */
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background-color .2s, transform .05s;
+}
+
+.btn-submit:hover {
+  background-color: #c85303;       /* variante plus vive */
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+}
+
+/* État invalide natif (HTML5) : couleur de bordure */
+.contact-form input:invalid,
+.contact-form textarea:invalid {
+  border-color: rgba(200, 0, 0, 0.5);
+}
+
+
+
+/* colors */
+
+.brun-fonce{
+    background-color: #190f06;
+}
+.orange-fonce{
+    background-color: #bb5002;
+}
+.orange-clair{
+    background-color: #fee3ac;
+}
+.blanc{
+    background-color: #fff;
+}
+.orange-fonce-2{
+    background-color: #c85303;
+}
